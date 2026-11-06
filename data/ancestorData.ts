@@ -90,16 +90,16 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
       {
         name: "La Chapelle-aux-Saints, Corrèze, France",
         coordinates: { lat: 44.9861, lng: 1.7214 },
-        geologicalContext: { era: "Cenozoic", period: "Late Pleistocene (Würm Glaciation)", climate: "Cold Sub-Arctic Tundra", age: "60,000 BP" },
+        geologicalContext: { era: "Cenozoic", period: "Late Pleistocene (Würm Glaciation)", climate: "Cold Sub-Arctic Tundra", age: "~47,000–60,000 BP (published estimates)" },
         inventory: [
-          { name: "The 'Old Man' of La Chapelle (LCS 1)", description: "Complete articulated skeleton deliberately laid in a shallow rectangular grave cut into the limestone floor.", category: "burial" },
-          { name: "Edentulous Mandible & Calvarium", description: "Jaw with complete loss of molars and severe arthritis, proving food had to be processed and chewed by caregivers.", category: "skull" },
+          { name: "The 'Old Man' of La Chapelle (LCS 1)", description: "Articulated skeleton that excavators read as an intentional burial in a shallow pit; a 2015 reanalysis argues the evidence is not unequivocal.", category: "burial" },
+          { name: "Heavily Worn Mandible & Calvarium", description: "Jaw that had lost most of its teeth, with severe arthritis; later studies suggest he could probably still chew, with difficulty.", category: "skull" },
           { name: "Mousterian Side-Scrapers & Bovid Bones", description: "Flint tools and unburned reindeer/bison limbs placed directly above the burial cut.", category: "environment" }
         ],
         stats: [
           { label: "CRANIAL VOLUME", value: "1,620 cc", subtext: "Massive occipital bun", iconType: "status" },
-          { label: "GRAVE CUT", value: "Rectangular 1.45m x 1m", subtext: "Deliberately excavated pit", iconType: "discovery" },
-          { label: "AGE AT DEATH", value: "60+ Years", subtext: "Advanced paleolithic geriatric", iconType: "era" }
+          { label: "GRAVE CUT", value: "Possible Grave Pit", subtext: "Excavators' reading; debated", iconType: "discovery" },
+          { label: "AGE AT DEATH", value: "Older Adult", subtext: "Age estimates vary by study", iconType: "era" }
         ]
       },
       {
@@ -107,14 +107,14 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 32.5583, lng: 34.9333 },
         geologicalContext: { era: "Cenozoic", period: "Late Pleistocene", climate: "Mediterranean Woodland", age: "60,000 BP" },
         inventory: [
-          { name: "Kebara 2 (Moshe) Skeleton & Hyoid Bone", description: "Most complete Neanderthal postcranial skeleton ever discovered, preserving the first intact fossil hyoid bone identical to modern humans.", category: "skeleton" },
-          { name: "Deliberate Funerary Cut", description: "Body placed in supine posture with right hand across chest; cranium deliberately removed after decomposition in a secondary mortuary rite.", category: "burial" },
+          { name: "Kebara 2 (Moshe) Skeleton & Hyoid Bone", description: "Most complete Neanderthal postcranial skeleton ever discovered, preserving a hyoid bone virtually identical to a modern human's.", category: "skeleton" },
+          { name: "Deliberate Funerary Cut", description: "Read as an intentional burial; the skull was missing, possibly removed after decomposition. That interpretation has been questioned.", category: "burial" },
           { name: "Levallois Points & Ash Hearths", description: "Deep stratigraphic hearth layers showing sustained cooking of tortoises, fallow deer, and wild legumes.", category: "environment" }
         ],
         stats: [
-          { label: "SPEECH ANATOMY", value: "Human-Identical Hyoid", subtext: "Capable of articulated speech", iconType: "status" },
-          { label: "SKELETAL COMPLETENESS", value: "88%", subtext: "Exceptional torso & pelvis", iconType: "discovery" },
-          { label: "HEARTH STRATA", value: "4-Meter Ash Layers", subtext: "Continuous fire control", iconType: "geology" }
+          { label: "SPEECH ANATOMY", value: "Modern-Like Hyoid", subtext: "Speech implications still debated", iconType: "status" },
+          { label: "SKELETAL COMPLETENESS", value: "Exceptionally Complete", subtext: "Torso & pelvis", iconType: "discovery" },
+          { label: "HEARTH STRATA", value: "Stratified Ash Layers", subtext: "Repeated fire use", iconType: "geology" }
         ]
       },
       {
@@ -127,7 +127,7 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         ],
         stats: [
           { label: "TYPE SPECIMEN", value: "Holotype 1856", subtext: "Founded paleoanthropology", iconType: "discovery" },
-          { label: "CORTICAL THICKNESS", value: "2.5x Modern Human", subtext: "High bone density", iconType: "status" },
+          { label: "CORTICAL THICKNESS", value: "Thick-Walled Long Bones", subtext: "Heavy build", iconType: "status" },
           { label: "DATING", value: "40,000 BP (AMS 14C)", subtext: "Final Neanderthal era", iconType: "era" }
         ]
       },
@@ -136,13 +136,13 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 46.1606, lng: 15.8753 },
         geologicalContext: { era: "Cenozoic", period: "Late Pleistocene (Eemian Interglacial)", climate: "Warm Temperate Woodland", age: "130,000 BP" },
         inventory: [
-          { name: "Krapina Dental & Cranial Remains (800+ fragments)", description: "Remains of over 70 individuals displaying post-mortem defleshing cutmarks consistent with complex secondary mortuary practices.", category: "burial" },
-          { name: "White-Tailed Eagle Talon Jewelry", description: "Eight modified eagle talons smoothed, burnished, and strung into the world's oldest known symbolic necklace.", category: "environment" }
+          { name: "Krapina Dental & Cranial Remains (800+ fragments)", description: "Remains of dozens of individuals; cutmarks have been read as secondary mortuary treatment, a reading that is debated.", category: "burial" },
+          { name: "White-Tailed Eagle Talon Jewelry", description: "Eight talons from at least three white-tailed eagles, about 130,000 years old; the authors suggest they formed a single piece, possibly a necklace.", category: "environment" }
         ],
         stats: [
-          { label: "INDIVIDUAL COUNT", value: "75–80 Hominins", subtext: "Largest Neanderthal sample", iconType: "discovery" },
-          { label: "SYMBOLIC ORNAMENT", value: "Eagle Talon Necklace", subtext: "Earliest human jewelry", iconType: "status" },
-          { label: "MORTUARY CUTMARKS", value: "Present on 30% Bones", subtext: "Secondary defleshing rites", iconType: "geology" }
+          { label: "INDIVIDUAL COUNT", value: "Dozens of Individuals", subtext: "A large Neanderthal sample", iconType: "discovery" },
+          { label: "SYMBOLIC ORNAMENT", value: "Eagle Talon Ornament", subtext: "Possible necklace, ~130,000 years old", iconType: "status" },
+          { label: "MORTUARY CUTMARKS", value: "Cutmarks Present", subtext: "Interpretation debated", iconType: "geology" }
         ]
       }
     ]
@@ -172,13 +172,13 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 31.8542, lng: -8.8719 },
         geologicalContext: { era: "Cenozoic", period: "Middle Pleistocene", climate: "Semi-Arid Savanna Mosaic", age: "315,000 BP (Thermoluminescence)" },
         inventory: [
-          { name: "Irhoud 10 Cranium & Mandibles", description: "Oldest recognized Homo sapiens fossils on Earth, presenting modern facial architecture beneath an elongated archaic braincase.", category: "skull" },
+          { name: "Irhoud 10 Cranium & Mandibles", description: "Among the oldest securely dated Homo sapiens fossils (about 315,000 years, ±34,000), with a modern-looking face under an elongated braincase. The species attribution is debated.", category: "skull" },
           { name: "Prepared Levallois Flints (Fire-Heated)", description: "Flint blades deliberately tempered with fire, enabling precise thermoluminescence dating.", category: "environment" }
         ],
         stats: [
           { label: "OLDEST H. SAPIENS", value: "315,000 BP", subtext: "Pushes origin back 100ka", iconType: "discovery" },
           { label: "FACIAL MORPHOLOGY", value: "Fully Modern", subtext: "Tucked-in face beneath brow", iconType: "status" },
-          { label: "HEAT-TREATED FLINTS", value: "300+ Artifacts", subtext: "Mastered pyrotechnology", iconType: "geology" }
+          { label: "HEAT-TREATED FLINTS", value: "Many Heated Flints", subtext: "Used to date the site", iconType: "geology" }
         ]
       },
       {
@@ -186,7 +186,7 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 56.1764, lng: 40.5058 },
         geologicalContext: { era: "Cenozoic", period: "Upper Paleolithic (Gravettian)", climate: "Glacial Mammoth-Steppe", age: "34,000 – 30,000 BP" },
         inventory: [
-          { name: "Sungir 1 Adult Male Regal Burial", description: "Skeleton buried in thick red ochre bed, adorned with 3,000 carved mammoth-ivory beads, 25 fox-tooth wristlets, and amber amulets.", category: "burial" },
+          { name: "Sungir 1 Adult Male Regal Burial", description: "Skeleton buried in thick red ochre bed, adorned with about 3,000 mammoth-ivory beads and pierced fox canines.", category: "burial" },
           { name: "Sungir 2 & 3 Juvenile Double Burial", description: "Head-to-head grave of two adolescents with 10,000 perforated ivory beads, straight 2.4-meter mammoth-tusk spears, and carved antler figurines.", category: "burial" },
           { name: "Polished Ivory Carvings & Needles", description: "Magnificent ivory disk pendants and fine eye needles illustrating tailored leather cold-weather parkas.", category: "environment" }
         ],
@@ -201,26 +201,26 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 32.6847, lng: 35.3028 },
         geologicalContext: { era: "Cenozoic", period: "Late Pleistocene", climate: "Mediterranean Oak-Pistachio Wooded Steppe", age: "100,000 – 90,000 BP" },
         inventory: [
-          { name: "Qafzeh 11 Child Burial with Fallow Deer Antlers", description: "Young child buried with the hands folded across the chest, clutching the antler rack of a Persian fallow deer directly over the sternum.", category: "burial" },
-          { name: "Qafzeh 9 & 10 Double Mother-Child Grave", description: "Young woman curled in fetal posture with the skeleton of a small toddler placed at her feet.", category: "burial" },
-          { name: "Red Ochre Stained Glycymeris Marine Shells", description: "Seashells transported 40 km from the Mediterranean coast, perforated and stained with hematite pigment for personal suspension.", category: "environment" }
+          { name: "Qafzeh 11 Child Burial with Fallow Deer Antlers", description: "A boy of about 12–13 buried in a grave cut with fallow deer antlers beside his chest, likely an offering.", category: "burial" },
+          { name: "Qafzeh 9 & 10 Double Burial", description: "A young adult and a child buried together.", category: "burial" },
+          { name: "Red Ochre Stained Glycymeris Marine Shells", description: "Glycymeris shells from the coast about 35 km away; naturally perforated, some with stringing wear and a few ochre-stained.", category: "environment" }
         ],
         stats: [
-          { label: "BURIAL AGE", value: "100,000 BP", subtext: "Earliest staged grave with animal offering", iconType: "discovery" },
+          { label: "BURIAL AGE", value: "~92,000–100,000 BP", subtext: "Burial with a deer-antler offering", iconType: "discovery" },
           { label: "GRAVE OFFERINGS", value: "Fallow Deer Antlers", subtext: "Clutched over chest", iconType: "status" },
-          { label: "OCHRE SHELLS", value: "7 Perforated Clams", subtext: "Earliest cosmetic beads", iconType: "geology" }
+          { label: "OCHRE SHELLS", value: "Perforated Shells", subtext: "Possible personal ornaments", iconType: "geology" }
         ]
       },
       {
         name: "Omo Kibish, Lower Omo Valley, Ethiopia",
         coordinates: { lat: 5.4042, lng: 35.9325 },
-        geologicalContext: { era: "Cenozoic", period: "Late Middle Pleistocene", climate: "Fluvio-Lacustrine Delta Basin", age: "233,000 BP" },
+        geologicalContext: { era: "Cenozoic", period: "Late Middle Pleistocene", climate: "Fluvio-Lacustrine Delta Basin", age: "At least ~233,000 BP" },
         inventory: [
           { name: "Omo I Cranium & Postcrania", description: "Remarkably modern skeletal remain with prominent chin, canine fossa, and tall vault, confirming ancient East African modern human roots.", category: "skull" },
           { name: "Omo II Thick Cranial Vault", description: "A companion specimen exhibiting somewhat more archaic cranial contouring, illustrating early polymorphic population variation.", category: "skeleton" }
         ],
         stats: [
-          { label: "RADIOISOTOPE AGE", value: "233,000 ± 22 ka", subtext: "Argon-Argon volcanic tuff dating", iconType: "era" },
+          { label: "RADIOISOTOPE AGE", value: "≥ ~233,000 years", subtext: "Minimum age from an ash layer above the fossils", iconType: "era" },
           { label: "CHIN FORMATION", value: "Mental Protuberance", subtext: "Diagnostic of modern Homo sapiens", iconType: "status" },
           { label: "VALLEY STRATA", value: "Member I Member III", subtext: "Lake Turkana tectonic rift", iconType: "geology" }
         ]
@@ -228,13 +228,13 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
       {
         name: "Cro-Magnon Rock Shelter, Les Eyzies, France",
         coordinates: { lat: 44.9367, lng: 1.0156 },
-        geologicalContext: { era: "Cenozoic", period: "Upper Paleolithic (Aurignacian)", climate: "Periglacial Steppe", age: "28,000 BP" },
+        geologicalContext: { era: "Cenozoic", period: "Upper Paleolithic", climate: "Periglacial Steppe", age: "~28,000 BP (radiocarbon)" },
         inventory: [
-          { name: "Cro-Magnon 1 'The Old Man' Cranium", description: "Iconic cranium with rectangular eye orbits, steep forehead, and fungal bone lesions (Langerhans cell histiocytosis).", category: "skull" },
-          { name: "Aurignacian Perforated Littorina Shells", description: "300 pierced marine shells used as burial shrouds or headdresses.", category: "burial" }
+          { name: "Cro-Magnon 1 'The Old Man' Cranium", description: "Iconic cranium with rectangular eye orbits and a steep forehead; bone lesions on the skull have been attributed to several possible causes, still debated.", category: "skull" },
+          { name: "Perforated Littorina Shells", description: "300 pierced marine shells used as burial shrouds or headdresses.", category: "burial" }
         ],
         stats: [
-          { label: "CRANIAL VOLUME", value: "1,600 cc", subtext: "High European vault", iconType: "status" },
+          { label: "CRANIAL VOLUME", value: "~1,590 cc", subtext: "High European vault", iconType: "status" },
           { label: "DISCOVERY YEAR", value: "1868", subtext: "Named the European Upper Paleolithic", iconType: "discovery" },
           { label: "LITHIC BLADES", value: "Mode 4 Prismatic", subtext: "Fine flint tool blades", iconType: "geology" }
         ]
@@ -266,12 +266,12 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 4.1333, lng: 35.8667 },
         geologicalContext: { era: "Cenozoic", period: "Early Pleistocene", climate: "Lacustrine Savanna Shoreline", age: "1.6 Million Years Ago" },
         inventory: [
-          { name: "Turkana Boy (KNM-WT 15000)", description: "The most complete early hominin skeleton ever unearthed (108 bones), belonging to an 8–10 year-old boy standing 160 cm tall.", category: "skeleton" },
+          { name: "Turkana Boy (KNM-WT 15000)", description: "Among the most complete early Homo skeletons (108 bones), from an adolescent boy (age estimates range from about 8 to 12) who stood roughly 154–160 cm.", category: "skeleton" },
           { name: "Complete Pelvic & Femoral Grid", description: "Narrow pelvic aperture and elongated femoral neck showing modern biomechanical striding bipedalism.", category: "skeleton" },
           { name: "Cranial Vault KNM-WT 15000", description: "Braincase volume of 880 cc, projected to reach 910 cc at adulthood.", category: "skull" }
         ],
         stats: [
-          { label: "SKELETAL COMPLETENESS", value: "88% Complete", subtext: "Near-total skeleton recovered", iconType: "discovery" },
+          { label: "SKELETAL COMPLETENESS", value: "Very Complete", subtext: "Among the best-preserved early Homo skeletons", iconType: "discovery" },
           { label: "ESTIMATED STATURE", value: "1.60 m (5 ft 3 in)", subtext: "Modern human proportions", iconType: "status" },
           { label: "DATING", value: "1.6 Ma (40Ar/39Ar)", subtext: "KBS Tuff correlation", iconType: "era" }
         ]
@@ -294,29 +294,29 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
       {
         name: "Zhoukoudian (Dragon Bone Hill), Beijing, China",
         coordinates: { lat: 39.6869, lng: 115.8453 },
-        geologicalContext: { era: "Cenozoic", period: "Middle Pleistocene", climate: "Temperate Steppe-Woodland with Cold Winters", age: "750,000 – 400,000 BP" },
+        geologicalContext: { era: "Cenozoic", period: "Middle Pleistocene", climate: "Temperate Steppe-Woodland with Cold Winters", age: "~770,000 – 230,000 BP" },
         inventory: [
-          { name: "Peking Man Calvaria & Mandibles (Sinanthropus)", description: "40+ individuals recovered from Locality 1 cave infills displaying pronounced sagittal keeling and thick cranial bone.", category: "skull" },
-          { name: "Thick Hearths & Calcined Animal Bones", description: "Multi-meter stratified burnt bone, charcoal, and red-burned sediment documenting early fire utilization.", category: "environment" },
+          { name: "Peking Man Calvaria & Mandibles (Sinanthropus)", description: "About 40 individuals recovered from Locality 1 cave infills displaying pronounced sagittal keeling and thick cranial bone.", category: "skull" },
+          { name: "Burnt-Looking Bone & Ash-Like Deposits", description: "Once read as evidence of early fire use; a 1998 reanalysis found no hearths, ash or charcoal in the sampled layers.", category: "environment" },
           { name: "Quartz Chopping Tools & Scrapers", description: "Thousands of vein quartz flakes used to butcher sika deer and steppe bison.", category: "environment" }
         ],
         stats: [
           { label: "BRAIN VOLUME", value: "1,040 cc", subtext: "Average of Peking specimens", iconType: "status" },
-          { label: "HEARTH THICKNESS", value: "Up to 6 Meters", subtext: "Longest cave occupation", iconType: "geology" },
-          { label: "INDIVIDUAL COUNT", value: "40+ Specimens", subtext: "Unprecedented population sample", iconType: "discovery" }
+          { label: "HEARTH THICKNESS", value: "Fire Use Debated", subtext: "Reanalysis questions the hearths", iconType: "geology" },
+          { label: "INDIVIDUAL COUNT", value: "~40 Individuals", subtext: "Most fossils since lost", iconType: "discovery" }
         ]
       },
       {
         name: "Trinil, Solo River, Java, Indonesia",
         coordinates: { lat: -7.3756, lng: 111.3592 },
-        geologicalContext: { era: "Cenozoic", period: "Early/Middle Pleistocene", climate: "Tropical Volcanic Riverine Lowlands", age: "1.0 – 0.7 Million Years Ago" },
+        geologicalContext: { era: "Cenozoic", period: "Early/Middle Pleistocene", climate: "Tropical Volcanic Riverine Lowlands", age: "Shell engraving ~540,000–430,000 years ago" },
         inventory: [
           { name: "Trinil 2 Calvarium ('Java Man')", description: "The landmark 1891 discovery by Eugène Dubois that demonstrated human origins occurred in deep prehistory.", category: "skull" },
           { name: "Trinil Femur I", description: "Pathological modern-looking bipedal femur that inspired Dubois to coin the name Pithecanthropus erectus.", category: "skeleton" },
-          { name: "Pseudodon Shell with Zigzag Engraving", description: "Freshwater mussel shell featuring deliberate geometric zigzag etchings made with a shark tooth ~500,000 years ago.", category: "environment" }
+          { name: "Pseudodon Shell with Zigzag Engraving", description: "Freshwater mussel shell with a zigzag engraving dated to roughly 540,000–430,000 years ago; in experiments a shark tooth matched the marks best.", category: "environment" }
         ],
         stats: [
-          { label: "EARLIEST ART ETCH", value: "500,000 BP", subtext: "Zigzag geometric engraving", iconType: "status" },
+          { label: "GEOMETRIC ENGRAVING", value: "~540,000–430,000 BP", subtext: "Zigzag geometric engraving", iconType: "status" },
           { label: "HISTORIC DISCOVERY", value: "Dubois 1891", subtext: "First fossil human ever sought", iconType: "discovery" },
           { label: "ISLAND HABITAT", value: "Volcanic Solo River", subtext: "Sunda shelf land bridge", iconType: "geology" }
         ]
@@ -331,8 +331,8 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
     cranialCapacity: "1,100 – 1,300 cc (Large robust braincase, arching double-torus brow)",
     locomotion: "Obligate Bipedalism (Tall, heavily muscled, deep thoracic cavity)",
     materialCulture: "Acheulean Mode 2 Handaxes, Prepared Levallois Flaking, Aerodynamic Wooden Javelins (Schöningen)",
-    burialTradition: "Earliest Proto-Burial Mortuary Accumulation & Body Disposal (Sima de los Huesos 'Pit of Bones')",
-    summary: "The direct common ancestor linking Neanderthals in Europe and modern humans in Africa. Homo heidelbergensis possessed formidable athletic builds, crafted balanced 2-meter aerodynamic spruce hunting spears to hunt wild horses, and created the world's oldest known funerary ritual site at Sima de los Huesos, where 28 individuals were dropped into a deep karst shaft alongside a red quartzite handaxe.",
+    burialTradition: "Possible Deliberate Body Accumulation (Sima de los Huesos 'Pit of Bones'); interpretation debated",
+    summary: "A Middle Pleistocene human whose place in our family tree is debated: some researchers place it near the ancestry of Neanderthals, Denisovans and modern humans, but the Sima de los Huesos fossils fall in the Neanderthal lineage. Associated sites include Schöningen, where spruce throwing spears were found (attribution to this species is inferred), and Sima de los Huesos, where at least 29 individuals lie at the bottom of a deep shaft next to a quartzite handaxe. Whether the bodies were placed there deliberately is still debated.",
     metadata: {
       threatLevel: "BIG-GAME APEX HUNTER",
       threatScore: 4,
@@ -348,15 +348,15 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 42.3503, lng: -3.5181 },
         geologicalContext: { era: "Cenozoic", period: "Middle Pleistocene", climate: "Mediterranean Sub-Plateau Karst System", age: "430,000 BP" },
         inventory: [
-          { name: "Funerary Shaft Accumulation (28 Individuals)", description: "6,000+ human bones cast down a 13-meter blind vertical chimney deep in the Cueva Mayor cave system, the earliest mortuary deposition on Earth.", category: "burial" },
-          { name: "Cranium 5 'Miguelón'", description: "The most complete pre-Neanderthal cranium in the world, with broad nasal aperture and survived facial fracture trauma.", category: "skull" },
-          { name: "Excalibur (Red Quartzite Biface)", description: "A pristine, unused handaxe chipped from exotic red and yellow quartzite, believed to be a symbolic funerary offering deposited with the bodies.", category: "burial" },
-          { name: "Pelvis 'Elvis'", description: "Extremely broad male pelvis indicating a towering 95 kg heavily muscled hunter.", category: "skeleton" }
+          { name: "Bone Accumulation (at least 29 individuals)", description: "Over 7,000 human fossils and fragments at the bottom of a deep vertical shaft in the Cueva Mayor cave system. Whether the bodies were deliberately placed there is still debated.", category: "burial" },
+          { name: "Cranium 5 'Miguelón'", description: "A nearly complete skull with a broad nasal aperture; severe dental decay and infection may have caused his death.", category: "skull" },
+          { name: "Excalibur (Quartzite Biface)", description: "A 685 g quartzite handaxe with no clear signs of use, the only stone tool in the deposit; a possible grave good.", category: "burial" },
+          { name: "Pelvis 'Elvis'", description: "Extremely broad male pelvis; body mass estimated at roughly 90–100 kg.", category: "skeleton" }
         ],
         stats: [
-          { label: "FOSSIL ABUNDANCE", value: "6,000+ Elements", subtext: "80% of world's Middle Pleistocene fossils", iconType: "discovery" },
-          { label: "MORTUARY OFFERING", value: "Excalibur Handaxe", subtext: "Only stone tool in entire shaft", iconType: "status" },
-          { label: "POPULATION SAMPLE", value: "28 Individuals", subtext: "Adolescents & prime adults", iconType: "geology" }
+          { label: "FOSSIL ABUNDANCE", value: "7,000+ Fossils", subtext: "A major share of the world's Middle Pleistocene human fossils", iconType: "discovery" },
+          { label: "POSSIBLE OFFERING", value: "Excalibur Handaxe", subtext: "Only stone tool in entire shaft", iconType: "status" },
+          { label: "POPULATION SAMPLE", value: "29+ Individuals", subtext: "Adolescents & prime adults", iconType: "geology" }
         ]
       },
       {
@@ -364,11 +364,11 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 52.1333, lng: 10.9667 },
         geologicalContext: { era: "Cenozoic", period: "Middle Pleistocene", climate: "Interglacial Lake Margin", age: "300,000 BP" },
         inventory: [
-          { name: "Schöningen Wooden Hunting Spears", description: "Nine balanced aerodynamic javelins carved from spruce saplings with center of gravity at front third, like modern Olympic javelins.", category: "environment" },
-          { name: "Butchered Horse Kill Horizon", description: "Bones of over 50 Equus mosbachensis horses with stone cutmarks and impact fracture points.", category: "environment" }
+          { name: "Schöningen Wooden Hunting Spears", description: "A set of spruce throwing spears with the weight toward the front, like a modern javelin. Attribution to Homo heidelbergensis is inferred.", category: "environment" },
+          { name: "Butchered Horse Kill Horizon", description: "Remains of many horses (Equus mosbachensis) with stone-tool cutmarks.", category: "environment" }
         ],
         stats: [
-          { label: "OLDEST WOODEN WEAPONS", value: "300,000 BP", subtext: "Aerodynamic throwing javelins", iconType: "discovery" },
+          { label: "WOODEN SPEARS", value: "~300,000 BP", subtext: "Aerodynamic throwing javelins", iconType: "discovery" },
           { label: "KILL HORIZON", value: "50+ Horses", subtext: "Coordinated pack ambush hunting", iconType: "status" },
           { label: "ORGANIC PRESERVATION", value: "Lacustrine Peat", subtext: "Anaerobic waterlogged soil", iconType: "geology" }
         ]
@@ -395,8 +395,8 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
     epoch: "Middle Pleistocene",
     cranialCapacity: "465 – 610 cc (Small orange-sized brain with derived frontal lobe shape)",
     locomotion: "Obligate Bipedalism (Modern human-like foot with curved climbing fingers)",
-    materialCulture: "Chamber Mortuary Caching, Wall Engravings, Fire Use in Pitch Darkness",
-    burialTradition: "Deep Subterranean Body Deposition in Pitch-Black Karst Chambers (Dinaledi Chamber)",
+    materialCulture: "Claimed chamber burials, wall markings and fire use (2023 preprints; contested)",
+    burialTradition: "Possible deliberate body deposition in deep karst chambers (Dinaledi Chamber); debated",
     summary: "Discovered deep inside the Rising Star cave system in South Africa, Homo naledi combines a tiny, ape-sized brain with a human-like wrist, foot, and slender body. Most astonishingly, this small-brained species traversed hundreds of meters through pitch-black, suffocatingly narrow subterranean fissures while carrying torches to deposit their dead in isolated chambers.",
     metadata: {
       threatLevel: "CAVERN ADAPTED FORAGER",
@@ -413,7 +413,7 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: -25.9222, lng: 27.7111 },
         geologicalContext: { era: "Cenozoic", period: "Middle Pleistocene", climate: "Karst Dolomite Subterranean Maze", age: "300,000 BP (US-ESR dating)" },
         inventory: [
-          { name: "Dinaledi Chamber Skeleton Cache (1,500+ elements)", description: "Minimum of 15 individuals of all ages deliberately placed in an isolated, pitch-black chamber accessible only through a 18-cm chute.", category: "burial" },
+          { name: "Dinaledi Chamber Skeleton Cache", description: "Remains of at least 15 individuals of all ages in a chamber reached through a narrow chute. Whether they were deliberately placed there is debated.", category: "burial" },
           { name: "Dinaledi Hand 1", description: "Nearly complete articulated hand showing curved phalanges for climbing combined with a robust thumb adapted for stone tool precision grips.", category: "skeleton" },
           { name: "DH1 Cranium and Mandible", description: "Small 560 cc braincase with advanced human-like cranial contouring.", category: "skull" }
         ],
@@ -428,7 +428,7 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: -25.9218, lng: 27.7108 },
         geologicalContext: { era: "Cenozoic", period: "Middle Pleistocene", climate: "Dolomite Karst Cave Sub-Chamber", age: "300,000 BP" },
         inventory: [
-          { name: "LES1 'Neo' Skeleton", description: "Exquisitely preserved adult skeleton with near-complete skull, facial bones, and articulated pelvis in a remote second chamber.", category: "skeleton" }
+          { name: "LES1 'Neo' Skeleton", description: "A partial adult skeleton (LES1, 'Neo') from the Lesedi Chamber.", category: "skeleton" }
         ],
         stats: [
           { label: "CRANIAL INTEGRITY", value: "Near-Complete", subtext: "Neo specimen", iconType: "status" },
