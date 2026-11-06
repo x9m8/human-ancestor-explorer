@@ -464,27 +464,27 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         geologicalContext: { era: "Cenozoic", period: "Late Pliocene", climate: "Fluviatile Floodplain & Lake Margin", age: "3.2 Million Years Ago" },
         inventory: [
           { name: "AL 288-1 'Lucy' Skeleton", description: "Iconic 40% complete skeleton of a 1.05-meter adult female demonstrating a short, bowl-shaped pelvis and valgus angled knees.", category: "skeleton" },
-          { name: "AL 333 'First Family'", description: "Catastrophic assemblage of over 200 fossil fragments representing at least 13 individuals who died together in a flash flood event.", category: "skeleton" },
+          { name: "AL 333 'First Family'", description: "Assemblage of 240+ specimens representing at least 17 individuals; the flash-flood explanation for their deaths is disputed.", category: "skeleton" },
           { name: "AL 444-2 Male Cranium", description: "Large male skull displaying pronounced temporal crests and facial prognathism.", category: "skull" }
         ],
         stats: [
           { label: "BIPEDAL PROOF", value: "Valgus Knee & Pelvis", subtext: "Confirmed upright walking in 1974", iconType: "status" },
           { label: "LUCY STATURE", value: "1.05 m (3 ft 5 in)", subtext: "Pronounced sexual dimorphism", iconType: "discovery" },
-          { label: "GEOLOGICAL MEMBER", value: "Kada Hadar Member", subtext: "Volcanic ash feldspar dating", iconType: "geology" }
+          { label: "GEOLOGICAL MEMBER", value: "Hadar Formation", subtext: "Volcanic ash feldspar dating", iconType: "geology" }
         ]
       },
       {
         name: "Laetoli, Ngorongoro Conservation Area, Tanzania",
-        coordinates: { lat: -2.9833, lng: 35.3500 },
+        coordinates: { lat: -3.2256, lng: 35.1922 },
         geologicalContext: { era: "Cenozoic", period: "Pliocene", climate: "Volcanic Savanna Plain", age: "3.66 Million Years Ago" },
         inventory: [
-          { name: "Laetoli Footprint Trail (Site G)", description: "70-meter pathway of 70 fossilized bipedal footprints pressed into wet volcanic carbonatite ash of Sadiman volcano by three individuals walking together.", category: "footprint" },
+          { name: "Laetoli Footprint Trail (Site G)", description: "Trail of about 70 fossilized hominin footprints, almost 27 meters long, pressed into wet volcanic carbonatite ash of Sadiman volcano by three individuals walking together.", category: "footprint" },
           { name: "Adducted Hallux (Big Toe)", description: "The footprints prove the big toe was held in line with the foot rather than opposable, with deep heel strikes and modern weight transfer arches.", category: "footprint" }
         ],
         stats: [
           { label: "FOOTPRINT DATING", value: "3.66 Ma (Ar-Ar)", subtext: "Volcanic carbonatite tuff", iconType: "era" },
           { label: "STRIDE ANALYSIS", value: "Deep Heel-Toe Push", subtext: "Equivalent to modern human walking", iconType: "status" },
-          { label: "INDIVIDUALS WALKING", value: "3 Hominins In Tandem", subtext: "One stepping in another's tracks", iconType: "discovery" }
+          { label: "INDIVIDUALS WALKING", value: "3 Individuals Likely", subtext: "One stepping in another's tracks", iconType: "discovery" }
         ]
       },
       {
@@ -495,9 +495,9 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
           { name: "DIK-1-1 'Selam' (Lucy's Child)", description: "Near-complete skeleton of a 3-year-old female toddler encased in sandstone, with face, skull, hyoid bone, and shoulder blade intact.", category: "skeleton" }
         ],
         stats: [
-          { label: "CHILD AGE", value: "3 Years Old", subtext: "Determined via dental CT scans", iconType: "discovery" },
+          { label: "CHILD AGE", value: "About 3 Years Old", subtext: "Estimated from dental development", iconType: "discovery" },
           { label: "CLIMBING SCAPULA", value: "Gorilla-Like Upward Socket", subtext: "Retained tree-climbing prowess", iconType: "status" },
-          { label: "HYOID BONE", value: "Ape-Like Air Sacs", subtext: "Primate vocal tract anatomy", iconType: "geology" }
+          { label: "HYOID BONE", value: "Ape-Like Hyoid", subtext: "Air-sac interpretation is debated", iconType: "geology" }
         ]
       }
     ]
@@ -528,7 +528,7 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         geologicalContext: { era: "Cenozoic", period: "Early Pleistocene", climate: "Dry Kalahari Margin Savanna", age: "2.5 – 2.0 Million Years Ago" },
         inventory: [
           { name: "Taung 1 (Taung Child)", description: "Fossilized face, jaw with milk teeth, and natural limestone endocast of the brain showing an anteriorly positioned foramen magnum.", category: "skull" },
-          { name: "Predator Talon Puncture Marks", description: "Punctures at the base of the eye orbits matching the talon strikes of a Crowned Hawk-Eagle, resolving the child's cause of death.", category: "skull" }
+          { name: "Predator Talon Puncture Marks", description: "Punctures at the base of the eye orbits matching the talon strikes of a Crowned Hawk-Eagle, consistent with a raptor attack, the interpretation proposed for the child's death.", category: "skull" }
         ],
         stats: [
           { label: "CRADLE DISCOVERY", value: "Raymond Dart 1924", subtext: "First early African hominin found", iconType: "discovery" },
@@ -541,14 +541,14 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: -26.0156, lng: 27.7344 },
         geologicalContext: { era: "Cenozoic", period: "Late Pliocene", climate: "Subterranean Karst Infill System", age: "2.6 – 2.1 Million Years Ago" },
         inventory: [
-          { name: "Sts 5 'Mrs. Ples' Complete Cranium", description: "Most complete cranium of Australopithecus africanus ever found, devoid of temporal crests.", category: "skull" },
+          { name: "Sts 5 'Mrs. Ples' Complete Cranium", description: "Well-preserved cranium of Australopithecus africanus (Sts 5).", category: "skull" },
           { name: "Sts 14 Articulated Pelvis and Spine", description: "Vertebral column and pelvis proving lumbar lordosis (S-curve spine) required for upright bipedal posture.", category: "skeleton" },
-          { name: "Little Foot (StW 573)", description: "A virtually 90% complete skeleton discovered in Member 2 deep in the Silberberg Grotto.", category: "skeleton" }
+          { name: "Little Foot (StW 573)", description: "A largely complete skeleton discovered deep in the Silberberg Grotto.", category: "skeleton" }
         ],
         stats: [
           { label: "SPINE CURVATURE", value: "Lumbar Lordosis", subtext: "Clear upright S-curve spine", iconType: "status" },
           { label: "FOSSIL RICHNESS", value: "500+ Hominin Fossils", subtext: "UNESCO World Heritage Cradle", iconType: "discovery" },
-          { label: "LITTLE FOOT", value: "90% Complete", subtext: "Most complete early hominin", iconType: "era" }
+          { label: "LITTLE FOOT", value: "Largely Complete", subtext: "Among the most complete early hominins", iconType: "era" }
         ]
       }
     ]
@@ -593,8 +593,8 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 3.9500, lng: 36.1833 },
         geologicalContext: { era: "Cenozoic", period: "Early Pleistocene", climate: "River Delta Margins of Paleo-Lake Turkana", age: "1.9 Million Years Ago" },
         inventory: [
-          { name: "KNM-ER 1813 Cranium", description: "Exquisitely preserved small adult skull (510 cc) with delicate modern facial architecture and rounded vault.", category: "skull" },
-          { name: "KNM-ER 1470 (Homo rudolfensis)", description: "Large flat-faced cranium with 775 cc volume, illustrating early Homo diversity in the East African rift.", category: "skull" }
+          { name: "KNM-ER 1813 Cranium", description: "Well-preserved small skull (about 510 cc) with delicate modern facial architecture and rounded vault.", category: "skull" },
+          { name: "KNM-ER 1470 (Homo rudolfensis)", description: "Large flat-faced cranium with a volume of roughly 750–775 cc, illustrating early Homo diversity in the East African rift.", category: "skull" }
         ],
         stats: [
           { label: "CRANIAL PRESERVATION", value: "Pristine", subtext: "KNM-ER 1813 cranium", iconType: "status" },
@@ -609,9 +609,9 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
     commonName: "Denisova Hominin",
     temporalRange: "280,000 – 30,000 Years Ago",
     epoch: "Middle to Late Pleistocene",
-    cranialCapacity: "1,400 – 1,600 cc (Massive molars, robust mandible, high adaptation to hypoxia)",
+    cranialCapacity: "Unknown (no complete cranium recovered; very large molars, robust mandible)",
     locomotion: "Obligate Bipedalism (Stout cold and high-altitude adapted stature)",
-    materialCulture: "Chlorite Bracelets, Polished Bone Needles, Mammoth Ivory Pendants, EPAS1 Tibetan Altitude Gene",
+    materialCulture: "Chlorite Bracelets, Polished Bone Needles, Mammoth Ivory Pendants",
     burialTradition: "Cave Stratum Caching; Fragmentary Remains Associated with Exquisite Ornaments",
     summary: "An enigmatic sister lineage to the Neanderthals identified first from ancient DNA extracted from a tiny finger bone. Denisovans inhabited the vast territories of Siberia, Central Asia, and the high-altitude Tibetan Plateau. They contributed the EPAS1 altitude adaptation gene to modern Tibetans and Sherpas, and crafted the world's most sophisticated polished stone jewelry.",
     metadata: {
@@ -629,29 +629,29 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 51.3975, lng: 84.6761 },
         geologicalContext: { era: "Cenozoic", period: "Late Pleistocene", climate: "Altai Sub-Alpine Montane Valley", age: "280,000 – 45,000 BP" },
         inventory: [
-          { name: "Denisova 3 Distal Finger Phalanx (The X-Woman)", description: "Pinky bone of a young girl from which the complete Denisovan nuclear genome was first sequenced in 2010.", category: "skeleton" },
+          { name: "Denisova 3 Distal Finger Phalanx (The X-Woman)", description: "Pinky bone of a young girl from which a draft Denisovan genome was sequenced in 2010 and a high-coverage genome in 2012.", category: "skeleton" },
           { name: "Denisova 11 'Denny' (First-Gen Hybrid)", description: "Bone fragment of a teenage girl whose DNA proved she had a Neanderthal mother and a Denisovan father.", category: "skeleton" },
           { name: "The Denisova Chlorite Bracelet", description: "Drilled and polished chloritolite stone bracelet reflecting optical green luster, created with a high-speed rotational drill 40,000 years ago.", category: "environment" },
           { name: "Denisova 4 & 8 Giant Molars", description: "Enormous wisdom teeth lacking the taurodontism of Neanderthals, confirming a distinctive cranial morphology.", category: "skull" }
         ],
         stats: [
           { label: "GENETIC FIRST", value: "Discovered by DNA", subtext: "First species discovered via paleogenomics", iconType: "discovery" },
-          { label: "CHLORITE BRACELET", value: "Polished 40,000 BP", subtext: "Earliest drilled gem jewelry", iconType: "status" },
+          { label: "CHLORITE BRACELET", value: "About 40,000 BP", subtext: "Stone bracelet fragments from Denisova Cave", iconType: "status" },
           { label: "DENNY HYBRID", value: "50% Neanderthal / 50% Denisovan", subtext: "Direct proof of interbreeding", iconType: "geology" }
         ]
       },
       {
         name: "Baishiya Karst Cave, Xiahe, Tibetan Plateau, China",
-        coordinates: { lat: 35.1978, lng: 102.8164 },
+        coordinates: { lat: 35.448, lng: 102.571 },
         geologicalContext: { era: "Cenozoic", period: "Middle Pleistocene", climate: "High-Altitude Alpine Plateau (3,280 m elevation)", age: "160,000 BP (Uranium-Thorium)" },
         inventory: [
           { name: "Xiahe Mandible", description: "Robust right hemi-mandible preserving two giant molars, identified as Denisovan through ancient proteomic collagen analysis.", category: "skull" },
-          { name: "High-Altitude EPAS1 Horizon", description: "Stratigraphic sedimentary DNA documenting continuous Denisovan occupation of the freezing Tibetan Plateau.", category: "environment" }
+          { name: "High-Altitude EPAS1 Horizon", description: "Sediment DNA from Baishiya Karst Cave indicating Denisovan presence on the Tibetan Plateau.", category: "environment" }
         ],
         stats: [
           { label: "PLATEAU ELEVATION", value: "3,280 Meters (10,700 ft)", subtext: "Living in low-oxygen hypoxia", iconType: "status" },
-          { label: "PROTEOMIC DATING", value: "160,000 BP", subtext: "Ancient peptide sequencing", iconType: "discovery" },
-          { label: "TIBETAN EPAS1 GENE", value: "Inherited Trait", subtext: "Gifted to modern highlanders", iconType: "geology" }
+          { label: "MINIMUM AGE", value: "At least 160,000 BP", subtext: "U-series dating of crust on the mandible", iconType: "discovery" },
+          { label: "TIBETAN EPAS1 GENE", value: "Inherited Variant", subtext: "Linked to Denisovan-related ancestry", iconType: "geology" }
         ]
       }
     ]
@@ -663,13 +663,13 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
     epoch: "Late Pleistocene",
     cranialCapacity: "380 – 426 cc (Chimpanzee-sized brain with highly folded derived frontal lobes)",
     locomotion: "Obligate Bipedalism (Endemic Insular Dwarfism, flat feet with long toes, short legs)",
-    materialCulture: "Advanced Flake Tools, Stegodon Dwarf Elephant Butchery, Controlled Fire In Caves",
+    materialCulture: "Advanced Flake Tools, Cutmarked Stegodon Bones",
     burialTradition: "No Formal Burials; Cave Sedimentary Infilling in Liang Bua",
-    summary: "Nicknamed 'The Hobbit' for its diminutive 1.06-meter (3 ft 6 in) adult stature and large feet. Homo floresiensis survived on the isolated Indonesian island of Flores until 50,000 years ago. Evolving under the pressures of insular island dwarfism, this tiny species hunted dwarf Stegodon elephants, braved Komodo dragons, and crafted sophisticated stone tools despite possessing a brain no larger than a grapefruit.",
+    summary: "Nicknamed 'The Hobbit' for its diminutive 1.06-meter (3 ft 6 in) adult stature and large feet. Homo floresiensis survived on the isolated Indonesian island of Flores until roughly 50,000 years ago. Evolving under the pressures of insular island dwarfism, this tiny species is associated with butchered dwarf Stegodon remains and stone flake tools, despite a brain of roughly 400 cc, about the size of a grapefruit.",
     metadata: {
       threatLevel: "INSULAR PACK HUNTER",
       threatScore: 3,
-      diet: "Carnivorous / Island Forager (Dwarf Stegodon, giant rats, Komodo dragons, birds)",
+      diet: "Carnivorous / Island Forager (Dwarf Stegodon, giant rats, birds; inferred from site remains)",
       packBehavior: "Close-Knit Island Cave Communities",
       integument: "Tropical Island Adaptation",
       flight: "Obligate Terrestrial Striding Biped",
@@ -683,7 +683,7 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         inventory: [
           { name: "LB1 'Flo' Holotype Skeleton", description: "Nearly complete 30-year-old female skeleton standing 1.06 m (3 ft 6 in) tall with miniature cranium and pelvic grid.", category: "skeleton" },
           { name: "LB1 Cranium (380 cc)", description: "Smallest adult human cranium known, displaying derived Homo-like frontal lobe geometry.", category: "skull" },
-          { name: "Butchered Juvenile Stegodon Bones", description: "Charred and cutmarked bones of dwarf Stegodon florensis insularis butchered with chert flakes.", category: "environment" }
+          { name: "Butchered Juvenile Stegodon Bones", description: "Cutmarked bones of dwarf Stegodon florensis insularis found with stone flakes.", category: "environment" }
         ],
         stats: [
           { label: "ADULT STATURE", value: "1.06 m (3 ft 6 in)", subtext: "Insular dwarfism evolution", iconType: "status" },
@@ -718,9 +718,9 @@ export const ANCESTOR_DB: HomininDatabaseEntry[] = [
         coordinates: { lat: 16.3333, lng: 17.5000 },
         geologicalContext: { era: "Cenozoic", period: "Late Miocene", climate: "Ancient Lake Mega-Chad Shoreline & Gallery Forest", age: "7.0 Million Years Ago (10Be/9Be dating)" },
         inventory: [
-          { name: "TM 266-01-080-1 'Toumaï' Cranium", description: "Nearly complete adult cranium with remarkably flat orthognathic face and thick brow ridge.", category: "skull" },
+          { name: "TM 266-01-060-1 'Toumaï' Cranium", description: "Nearly complete adult cranium with remarkably flat orthognathic face and thick brow ridge.", category: "skull" },
           { name: "TM 266 Mandibular Fragments", description: "Mandibles showing reduced, non-honing canines without a modern ape canine-premolar shearing complex.", category: "skull" },
-          { name: "TM 266 Femoral Shaft", description: "Partial left femur showing structural cross-sections and femoral neck angle consistent with habitual upright walking.", category: "skeleton" }
+          { name: "TM 266 Femoral Shaft", description: "Partial femur whose attribution and bipedal interpretation are contested.", category: "skeleton" }
         ],
         stats: [
           { label: "DEEPEST ANCESTOR", value: "7.0 Million Years", subtext: "Earliest known hominin candidate", iconType: "discovery" },
