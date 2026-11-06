@@ -38,36 +38,8 @@ export interface HomininDatabaseEntry {
   }[];
 }
 
-export const ARCHIVAL_RECONSTRUCTIONS: Record<string, string> = {
-  "homo neanderthalensis": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Homo_neanderthalensis_adult_male_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Homo_neanderthalensis_adult_male_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "neanderthal": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Homo_neanderthalensis_adult_male_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Homo_neanderthalensis_adult_male_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "homo sapiens": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Homo_sapiens_Cro-Magnon_1_-_reconstruction_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Homo_sapiens_Cro-Magnon_1_-_reconstruction_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "early homo sapiens": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Homo_sapiens_Cro-Magnon_1_-_reconstruction_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Homo_sapiens_Cro-Magnon_1_-_reconstruction_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "homo erectus": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Homo_erectus_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Homo_erectus_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "turkana boy": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Homo_erectus_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Homo_erectus_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "homo heidelbergensis": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Homo_heidelbergensis_adult_male_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Homo_heidelbergensis_adult_male_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "homo naledi": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Homo_naledi_reconstruction_by_John_Gurche.jpg/640px-Homo_naledi_reconstruction_by_John_Gurche.jpg",
-  "australopithecus afarensis": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Australopithecus_afarensis_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Australopithecus_afarensis_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "lucy": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Australopithecus_afarensis_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Australopithecus_afarensis_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "australopithecus africanus": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Australopithecus_africanus_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Australopithecus_africanus_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "taung child": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Australopithecus_africanus_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Australopithecus_africanus_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "homo habilis": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Homo_habilis_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Homo_habilis_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "denisova": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Denisovan_reconstruction_Hebrew_University_Jerusalem.jpg/640px-Denisovan_reconstruction_Hebrew_University_Jerusalem.jpg",
-  "denisovans": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Denisovan_reconstruction_Hebrew_University_Jerusalem.jpg/640px-Denisovan_reconstruction_Hebrew_University_Jerusalem.jpg",
-  "homo floresiensis": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Homo_floresiensis_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Homo_floresiensis_adult_female_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "sahelanthropus tchadensis": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sahelanthropus_tchadensis_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Sahelanthropus_tchadensis_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg",
-  "toumai": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sahelanthropus_tchadensis_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg/640px-Sahelanthropus_tchadensis_-_head_model_-_Smithsonian_Museum_of_Natural_History.jpg"
-};
-
-export const getArchivalReconstruction = (taxa: string): string => {
-  const key = taxa.toLowerCase().trim();
-  for (const [k, url] of Object.entries(ARCHIVAL_RECONSTRUCTIONS)) {
-    if (key.includes(k) || k.includes(key)) {
-      return url;
-    }
-  }
-  return ARCHIVAL_RECONSTRUCTIONS["homo neanderthalensis"];
-};
+// Static build: no external reconstruction images (their sources could not be verified).
+export const getArchivalReconstruction = (_taxa: string): string => "";
 
 export const findLocalAncestor = (query: string): HomininDatabaseEntry | null => {
   const q = query.toLowerCase().trim();

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState, useMemo } from 'react';
 import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
+import worldAtlas from 'world-atlas/countries-110m.json';
 import { SiteMarker } from '../types';
 import { Plus, Minus, Compass, Navigation, Trees, MapPin, Footprints, Wind, Anchor } from 'lucide-react';
 import { AncestorIcon } from './Icons';
@@ -97,10 +98,7 @@ const MapCanvas: React.FC<MapCanvasProps> = ({
   const prevTaxaRef = useRef<string>(activeTaxaName);
 
   useEffect(() => {
-    fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
-      .then(response => response.json())
-      .then(data => setWorldData(data))
-      .catch(err => console.error("Map Data Fetch Error:", err));
+    setWorldData(worldAtlas);
   }, []);
 
   useEffect(() => {
@@ -610,7 +608,6 @@ const MapCanvas: React.FC<MapCanvasProps> = ({
               const isCur = marker.name === selectedMarkerId;
               const courseColors = ['bg-emerald-500', 'bg-amber-500', 'bg-sky-500', 'bg-rose-500', 'bg-purple-500', 'bg-teal-500'];
               const colorClass = courseColors[idx % courseColors.length];
-              const estMins = (idx + 1) * 8 + 3;
 
               return (
                 <button
@@ -630,9 +627,6 @@ const MapCanvas: React.FC<MapCanvasProps> = ({
                       {marker.name}
                     </span>
                   </div>
-                  <span className="text-[9px] font-hand font-bold text-park-ink-muted shrink-0 bg-white/60 px-1.5 py-0.5 rounded border border-black/5">
-                    {estMins} min
-                  </span>
                 </button>
               );
             })}

@@ -6,6 +6,8 @@ import MapCanvas from './components/MapCanvas';
 import { TechIcon, AncestorIcon } from './components/Icons';
 import { 
   Loader2, 
+  Maximize2,
+  Minimize2,
   Map as MapIcon, 
   Globe, 
   ChevronRight, 
@@ -68,7 +70,7 @@ const App: React.FC = () => {
     setImgError(false);
     
     try {
-      const img = await generateTaxaBlueprint(taxa);
+      const img = '';
       if (currentBlueprintTaxa.current === taxa && img) {
         setBlueprintImage(img);
       }
@@ -150,6 +152,22 @@ const App: React.FC = () => {
     handleSiteSelect(markers[prevIdx], true);
   };
 
+  const [isFs, setIsFs] = useState(false);
+  useEffect(() => {
+    const f = () => setIsFs(!!document.fullscreenElement);
+    document.addEventListener('fullscreenchange', f);
+    return () => document.removeEventListener('fullscreenchange', f);
+  }, []);
+  const toggleFullscreen = async () => {
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await document.documentElement.requestFullscreen();
+    } catch {
+      // Embedded without fullscreen permission: open the app on its own page instead.
+      window.open(window.location.href, '_blank');
+    }
+  };
+
   const handleCopyLink = () => {
     navigator.clipboard?.writeText(window.location.href);
     setCopiedUrl(true);
@@ -177,7 +195,7 @@ const App: React.FC = () => {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-[26px] font-hand font-extrabold text-park-ink leading-none">
+                <span className="text-[19px] sm:text-[26px] font-hand font-extrabold text-park-ink leading-none">
                   Human Ancestor Explorer <span className="font-rounded text-[17px] font-bold text-park-tree">by x9m8</span>
                 </span>
                 <button
@@ -256,10 +274,19 @@ const App: React.FC = () => {
       </header>
 
       {/* Main Content Area */}
-      <div className="flex-1 flex flex-row overflow-hidden relative">
+      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden relative min-h-0">
         
         {/* Left Column: Full Canvas Interactive Map */}
-        <main className="flex-1 h-full relative group/map overflow-hidden">
+        <main className="flex-none h-[46vh] lg:flex-1 lg:h-full relative group/map overflow-hidden">
+          <button
+            onClick={toggleFullscreen}
+            title={isFs ? 'Exit full screen' : 'Full screen'}
+            aria-label={isFs ? 'Exit full screen' : 'Full screen'}
+            className="absolute top-3 left-3 z-40 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 border-2 border-white/80 shadow-md text-[11px] font-rounded font-extrabold text-park-ink hover:bg-white"
+          >
+            {isFs ? <Minimize2 size={13} /> : <Maximize2 size={13} />}
+            <span>{isFs ? 'Exit' : 'Full screen'}</span>
+          </button>
            <MapCanvas 
              markers={markers} 
              selectedMarkerId={markers[currentIndex]?.name} 
@@ -312,7 +339,7 @@ const App: React.FC = () => {
         </main>
 
         {/* Right Sidebar: Nature Field Journal / Archaeological Expedition Guidebook */}
-        <aside className="w-[480px] lg:w-[500px] xl:w-[530px] bg-[#faf8f3] flex flex-col shadow-[-4px_0_15px_rgba(0,0,0,0.03)] z-10 overflow-hidden relative border-l border-park-card-border shrink-0">
+        <aside className="w-full flex-1 min-h-0 lg:flex-none lg:w-[500px] xl:w-[530px] bg-[#faf8f3] flex flex-col shadow-[-4px_0_15px_rgba(0,0,0,0.03)] z-10 overflow-hidden relative border-l border-park-card-border shrink-0">
           {selectedSite ? (
             <div className="flex flex-col h-full relative overflow-y-auto no-scrollbar p-5 space-y-4">
               
@@ -326,6 +353,10 @@ const App: React.FC = () => {
                   {selectedSite.epoch || selectedSite.geologicalContext.era}
                 </span>
               </div>
+
+              <p className="text-[10px] font-rounded text-park-ink-muted leading-snug -mt-1">
+                Offline database compiled with AI assistance. Dates, counts and measurements are approximate and some findings are debated. Check primary sources before citing.
+              </p>
 
               {/* Species Name Hero Card */}
               <div className="border-2 border-park-border-green/40 p-4 relative bg-white/90 rounded-2xl shadow-xs">
@@ -354,66 +385,6 @@ const App: React.FC = () => {
                   <MapPin size={13} className="text-park-accent-orange shrink-0" />
                   <span className="truncate">{selectedSite.name}</span>
                 </div>
-              </div>
-
-              {/* Forensic Facial & Anatomical Reconstruction Container */}
-              <div className="p-3.5 bg-[#ffffff] rounded-2xl border border-park-card-border shadow-xs flex flex-col items-center justify-center min-h-[260px] relative overflow-hidden group">
-                {blueprintImage ? (
-                  <div className="relative w-full h-full flex flex-col items-center justify-center bg-[#ffffff] rounded-xl overflow-hidden">
-                    <div className="relative w-full flex items-center justify-center">
-                      <img 
-                        src={blueprintImage} 
-                        alt={`${activeQuery} forensic reconstruction`}
-                        onError={() => {
-                          setBlueprintImage(getArchivalReconstruction(activeQuery));
-                        }}
-                        className="max-h-72 w-full object-contain rounded-xl bg-[#ffffff] cursor-pointer hover:scale-[1.01] transition-transform" 
-                        onClick={() => setIsZoomModalOpen(true)}
-                      />
-                      {imgLoading && (
-                        <div className="absolute top-2 right-2 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-full border border-park-card-border shadow-xs flex items-center gap-1.5 text-[10px] font-rounded font-bold text-park-tree">
-                          <Loader2 size={11} className="animate-spin text-park-tree" />
-                          <span>Generating AI variation...</span>
-                        </div>
-                      )}
-                    </div>
-                    
-                    <div className="w-full flex justify-between items-center px-2 pt-2 text-[10px] font-rounded text-park-ink-muted">
-                      <span className="font-semibold italic">Forensic Facial Reconstruction • {activeQuery}</span>
-                      <button
-                        onClick={() => {
-                          currentBlueprintTaxa.current = null;
-                          updateBlueprint(activeQuery);
-                        }}
-                        disabled={imgLoading}
-                        className="hover:text-park-tree font-bold underline flex items-center gap-1 disabled:opacity-50"
-                        title="Generate or reload forensic portrait"
-                      >
-                        <RotateCcw size={10} /> Regenerate
-                      </button>
-                    </div>
-                  </div>
-                ) : imgLoading ? (
-                  <div className="flex flex-col items-center gap-2 py-12">
-                      <Loader2 className="animate-spin text-park-tree" size={32} />
-                      <span className="text-[12px] font-rounded font-bold text-park-ink animate-pulse">
-                        Loading forensic facial reconstruction...
-                      </span>
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center gap-2 py-8 text-center">
-                    <AncestorIcon className="w-10 h-10 fill-park-tree/30" />
-                    <span className="text-[11px] font-rounded text-park-ink-muted font-semibold">
-                      Forensic Reconstruction Ready
-                    </span>
-                    <button 
-                      onClick={() => setBlueprintImage(getArchivalReconstruction(activeQuery))}
-                      className="px-3.5 py-1.5 bg-park-tree text-white rounded-xl text-[11px] font-rounded font-bold hover:bg-park-tree/90 transition-all shadow-xs"
-                    >
-                      View Museum Portrait
-                    </button>
-                  </div>
-                )}
               </div>
 
               {/* Specialized Hominin Feature Cards */}
