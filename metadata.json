@@ -1,0 +1,8 @@
+{
+  "name": "Guman Ansestor Fossil Map Explorer",
+  "description": "Human Ancestor Explorer by x9m8 — Interactive global survey of early to modern hominin fossil remains, ancient burials, cranial capacities, and archaeological excavation sites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
